@@ -1,0 +1,28 @@
+#exercise 1.2.a
+dna = " gcatgacgttattacgactctgtcacgccgcggtgcgactgaggcgtggcgtctgctgggcctttacttcgcctccgcgccctgcattccgttcctggcctcg "
+dna = dna[1:-1] #This gets rid of the 2 spaces in the start and end of the array
+print(dna)
+
+#exercise 1.2.b
+a_tconvert = dna.replace('a','T').replace('t','A') #This string function replaces the characters both at the same time
+print(a_tconvert.lower()) #This function makes the uppercases back to lower cases
+
+#exercise 1.2.c
+numerator = dna.count("gc") #Counts how many 'gc' exists in the dna code
+denominator = len(dna) #Counts how many letters the dna code is made of
+percent_number = numerator*100/denominator #calculates the percentage
+print(str(percent_number) + "%") #Converts the percent_number, which is a float, back to string
+
+#exercise 1.2.d
+complement = "" #Create a new string for the complementary dna code
+for letter in dna:
+    if letter == 'a':
+        complement += 't'
+    if letter == 't':
+        complement += 'a'
+    if letter == 'g':
+        complement += 'c'
+    if letter == 'c':
+        complement += 'g'
+print(complement) #Add the converted letters back to the string, creating the complementary string
+
