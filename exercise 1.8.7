@@ -1,0 +1,40 @@
+list_1 = []
+list_2 = []
+final_list1 = []
+final_list2 = []
+final_list = []
+count_1 = int(input("How many strings will you type for list 1? "))
+for i in range(count_1):
+    string_value1 = input("Enter a string for list 1 ")
+    list_1.append(string_value1)
+    for i in list_1:
+        if i not in final_list1:
+            final_list1.append(i)
+print("The list 1 is " + str(final_list1))
+
+count_2 = int(input("How many strings will you type for list 2? "))
+for i in range(count_2):
+    string_value2 = input("Enter a string for list 2 ")
+    list_2.append(string_value2)
+    for i in list_2:
+        if i not in final_list2:
+            final_list2.append(i)
+print("The list 2 is " + str(final_list2))
+
+if len(final_list1) > len(final_list2):
+    for i in range(len(final_list2) + 1):
+        if final_list1[i] in final_list2:
+            final_list.append(final_list1[i])
+    print(final_list)
+
+if len(final_list2) > len(final_list1):
+    for i in range(len(final_list1) + 1):
+        if final_list2[i] in final_list1:
+            final_list.append(final_list2[i])
+    print(final_list)
+
+if len(final_list1) == len(final_list2):
+    for i in range(len(final_list2)):
+        if final_list1[i] in final_list2:
+            final_list.append(final_list1[i])
+    print(final_list)
