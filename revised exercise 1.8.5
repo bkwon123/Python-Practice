@@ -1,0 +1,9 @@
+final_list = []
+number = int(input(("How many strings are you typing? ")))
+
+for i in range(number):
+    string_value = input("Enter a string ")
+    if string_value not in final_list:
+        final_list.append(string_value)
+
+print(final_list)
