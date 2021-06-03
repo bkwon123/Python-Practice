@@ -1,0 +1,10 @@
+a = int(input("type in number :  "))
+k = 2
+for i in range(pow(2, 32)):
+    if a%k == 0:
+        a = a/k
+        print(k)
+    else:
+        k = k + 1
+    if int(a/k) == 0:
+        break
