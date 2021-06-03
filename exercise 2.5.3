@@ -1,0 +1,18 @@
+input_text = '‘gcatgacgttattacgactctgtcacgccgcggtgcgactgaggcgtggcgtctgctgggcctttacttcgcctccgcgccctgcattccgttcctggcctcg’'
+lst = []
+f_lst = []
+dict = {}
+count = 0
+k = 0
+for k in range(1,len(input_text)-1):
+    lst.append(input_text[k:k+1])
+    if input_text[k] not in f_lst:
+        f_lst.append(input_text[k])
+print(lst)
+
+for i in f_lst:
+    dict.update({str(i): lst.count(str(i))})
+    print(str(i),'ㅣ','-'*lst.count(str(i)))
+    count = count + 1
+    if count == 4:
+        print(dict)
