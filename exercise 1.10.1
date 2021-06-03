@@ -1,0 +1,6 @@
+input_text = input("Type a string :  ")
+lst = []
+k = 0
+for k in range(0,len(input_text)):
+    lst.append(input_text[k:k+1])
+print(['index['+ str(i) + ']' + lst[i] for i in range(0,len(input_text),2)])
