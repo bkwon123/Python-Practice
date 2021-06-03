@@ -1,0 +1,8 @@
+a = int(input("type in number :  "))
+k = 2
+while int(a/k) != 0:
+    if a % k == 0:
+        a = a / k
+        print(k)
+    else:
+        k = k + 1
