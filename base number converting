@@ -1,0 +1,10 @@
+a = int(input("Type a number to convert :  "))
+t = a
+ans=''
+k = int(input("Division by what number between 2 and 9? :   "))
+for i in range(pow(2,32)):
+    a,b = divmod(a,k)
+    ans+=str(b)
+    if a==0:
+        break
+print("The conversion for" , t , "is" , ans[::-1])
