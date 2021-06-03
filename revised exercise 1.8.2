@@ -1,0 +1,12 @@
+count = 0
+number = int(input(("How many strings are you typing? ")))
+
+for i in range(number):
+    string_value = input("Enter a string ")
+
+    if len(string_value) > 2:
+        if string_value[0] == string_value[-1]:
+            count = count + 1
+
+
+print("The number of list elements with string length greater than 2 and with same first and last letter is ", count)
