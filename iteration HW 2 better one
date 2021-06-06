@@ -1,0 +1,19 @@
+lst = []
+final_list = []
+dict = {}
+final_dict = []
+num = input("How many number of keys will you add?  ")
+print("Enter the keys. Press Enter bar to type the next one")
+for i in range(int(num)):
+    dict[str(i + 1)] = input().split(",")
+    if i > 0:
+        for x in range(len(dict[str(i + 1)])):
+            final_list.append(dict[str(i+1)][x])
+print(dict)
+for i in range(len(dict[str('1')])):
+    for k in range(len(final_list)):
+        final_combination = dict[str('1')][i]+final_list[k]
+        if final_combination not in final_dict:
+            final_dict.append(final_combination)
+            combination = ",".join(final_dict)
+print("All possible combinations are", combination)
